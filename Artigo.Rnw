@@ -1,0 +1,713 @@
+% ------------------------------------------------------------------------
+% Artigo 
+% ------------------------------------------------------------------------
+
+% Carga de parâmetros
+<<echo=FALSE, warning=FALSE, results='hide', message=FALSE, highlight=FALSE, error=FALSE, fig.show='hide'>>=
+# Ajusta diretorio de trabalho
+
+source('inicializa.R')
+inicializa()
+setwd('J://Projetos//lgcs');
+
+# BibTeX (http://texblog.org/category/sweaveknitr/)
+Sys.setenv(TEXINPUTS = getwd(), BIBINPUTS = getwd(), BSTINPUTS = getwd()); 
+@
+
+
+\documentclass[
+	% -- opções da classe memoir --
+	article,			        % indica que é um artigo acadêmico
+	11pt,				          % tamanho da fonte
+	oneside,			        % para impressão apenas no verso. Oposto a twoside
+	a4paper,			        % tamanho do papel. 
+	english,			        % idioma adicional para hifenização
+	brazil,				        % o último idioma é o principal do documento
+	sumario=tradicional
+]{abntex2}
+
+
+% ---
+% PACOTES
+% ---
+
+% ---
+% Pacotes fundamentais 
+% ---
+\usepackage{lmodern}			    % Usa a fonte Latin Modern
+\usepackage[T1]{fontenc}		  % Selecao de codigos de fonte.
+\usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
+\usepackage{indentfirst}   		% Indenta o primeiro parágrafo de cada seção.
+\usepackage{nomencl}  		  	% Lista de simbolos
+\usepackage{color}				    % Controle das cores
+\usepackage{graphicx}			    % Inclusão de gráficos
+\usepackage{microtype} 			  % para melhorias de justificação
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{float}
+\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
+\usepackage[alf]{abntex2cite}	% Citações padrão ABNT
+\usepackage{everypage}
+\usepackage{fourier}
+\usepackage{multirow}
+\usepackage{hyperref}
+\AddEverypageHook{DRAFT VERSION}
+
+% ---
+
+% ---
+\newcommand*{\fullref}[1]{\hyperref[{#1}]{\autoref*{#1} \nameref*{#1}}}
+% Configurações do pacote backref
+% Usado sem a opção hyperpageref de backref
+\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
+% Texto padrão antes do número das páginas
+\renewcommand{\backref}{}
+% Define os textos da citação
+\renewcommand*{\backrefalt}[4]{
+	\ifcase #1 %
+		Nenhuma citação no texto.%
+	\or
+		Citado na página #2.%
+	\else
+		Citado #1 vezes nas páginas #2.%
+	\fi}%
+% ---
+
+% ---
+% Informações de dados para CAPA e FOLHA DE ROSTO
+% ---
+\titulo{Jogos cooperativos na\\ gestão da cadeia de suprimentos}
+
+\author{João B. G. Brito, \emph{Esp.}   \\   
+    \href{mailto:jbgb@uol.com.br}{jbgb@uol.com.br} 
+  \and {Michel J. Anzanello, \emph{Phd}} \\
+    \href{mailto:michel.anzanello@gmail.com}{michel.anzanello@gmail.com}
+}
+
+\date{\today}
+
+\instituicao{
+    Universidade Federal do Rio Grande do Sul -- UFRGS\\
+    Escola de Engenharia de Produção -- Programa de Pós-graduação
+}
+
+\local{Av. Osvaldo Aranha, 99 â 5Âº andar, CEP: 90035-190, Porto Alegre/RS}
+
+% ---
+% Configurações de aparência do PDF final
+
+% alterando o aspecto da cor azul
+\definecolor{blue}{RGB}{41,5,195}
+
+% informações do PDF
+\makeatletter
+\hypersetup{
+     	%pagebackref=true,
+		pdftitle={\@title}, 
+		pdfauthor={\@author},
+    	pdfsubject={\@title},
+	    pdfcreator={\@author},
+  	pdfkeywords={Teoria dos jogos cooperativos}
+                {Gestão da cadeia de suprimentos}
+                {Shapley value},
+   	 colorlinks=true,       	  % false: boxed links; true: colored links
+     	linkcolor=blue,          	% color of internal links
+    	citecolor=blue,        		% color of links to bibliography
+    	filecolor=magenta,      	% color of file links
+		urlcolor=blue,
+		bookmarksdepth=4
+}
+\makeatother
+% --- 
+
+% compila o indice
+% ---
+\makeindex
+% ---
+
+% ---
+% Altera as margens padrões
+% ---
+\setlrmarginsandblock{3cm}{3cm}{*}
+\setulmarginsandblock{3cm}{3cm}{*}
+\checkandfixthelayout
+% ---
+
+% --- 
+% EspaÃ§amentos entre linhas e parágrafos 
+% --- 
+
+% O tamanho do parágrafo é dado por:
+\setlength{\parindent}{1.3cm}
+
+% Controle do espaÃ§amento entre um parágrafo e outro:
+\setlength{\parskip}{0.2cm}  % tente também \onelineskip
+
+% EspaÃ§amento simples
+\SingleSpacing
+
+% ----
+% Início do documento
+% ----
+\begin{document}
+
+% Seleciona o idioma do documento (conforme pacotes do babel)
+%\selectlanguage{english}
+\selectlanguage{brazil}
+
+% Retira espaÃ§o extra obsoleto entre as frases.
+\frenchspacing 
+
+% ----------------------------------------------------------
+% ELEMENTOS PRÉ-TEXTUAIS
+% ----------------------------------------------------------
+
+%---
+%
+% Se desejar escrever o artigo em duas colunas, descomente a linha abaixo
+% e a linha com o texto ``FIM DE ARTIGO EM DUAS COLUNAS''.
+%
+%---
+% página de titulo
+\maketitle
+
+
+% resumo em português
+\begin{resumoumacoluna}
+% Contextualização: 
+% Gap:
+% Proposta: 
+% Metodologia
+% Resultados
+% Conclusão 
+No ambiente da cadeia de suprimentos (CS) as decisões de cada organização tendem a refletir nos seus elos. A análise dessas interações é importante para avaliar a colaboração entre seus membros, sugerir acordos e buscar o equilíbrio mais rentável. O presente artigo busca a equalização da contribuição marginal em consonância com axiomas de justiÃ§a oferecidos pelo emprego da teoria dos jogos cooperativos (TJC). A proposta é oferecer uma solução computacional gratuita e \emph{on-line} como interface de simulações do algoritmo \emph{Shapley Value}. A aplicação dispõe de um mapa para apontar a geolocalização de cada membro; painel com ocorrências para informar a contribuição marginal de cada relação, e área de apresentação dos resultados. O \emph{Shapley Value} retorna a razão justa de participação de cada componente na conjectura de todas as conexões --- cooperações --- possíveis. A proposta inicia com a apreciação dos conceitos da TJC na ambiência da Gestão da Cadeia de Suprimentos (GCS); o artigo afunila no estudo do método, e por fim, a lacuna é atendida pela implementação. A solução advém \texttt{(adicionar os resultados)}. Conclui--se que a adoção do \emph{Shapley Value} tem potencial de instrumentar apoio na definição de diretrizes da GCS, pois seu emprego oferece recursos para racionalizar relacionamentos, estratégias conflitantes e colaborativas.
+
+ \vspace{\onelineskip}
+ 
+ \noindent
+ \textbf{Palavras-chave}: Agentes da cadeia de suprimentos. Otimização. Teoria dos Jogos. Shapley value.
+\end{resumoumacoluna}
+
+% ---
+
+% ----------------------------------------------------------
+% ELEMENTOS TEXTUAIS
+% ----------------------------------------------------------
+\textual
+
+% \twocolumn[    		    
+% ]      		% FIM DE ARTIGO EM DUAS COLUNAS
+% ----------------------------------------------------------
+% Introdução
+% ----------------------------------------------------------
+\section*{Introdução}
+\addcontentsline{toc}{section}{Introdução}
+
+Na profusão do mundo profissional organizações deparam-se com decisões difíceis de serem tomadas, tanto pela importância de suas consequências, quanto pelos resultados, muitas vezes, incertos \cite{Bekman.2009}. \citeonline{Nate.2012} destaca que a incerteza\footnote{Incerteza é o risco difícil de aferir \cite{Nate.2012}.} é usualmente interpretada como risco\footnote{Risco, conforme \citeonline{Knigth.1921}, é algo em que você pode colocar um preÃ§o.} --- uma imprecisão mensurável; \citeonline{Tversky.1972} é remissivo ao uso da intuição em cenários de incerteza, um artifício comum no processo de eliminação\footnote{Escolhas são analisadas como um probabilístico processo de sucessivas eliminações \cite{Tversky.1972}.} de opções; e para \citeonline{Mlodinow.2009}, tomar decisões e realizar avaliações sábias sobre condições de incerteza é uma habilidade rara. Porém, como qualquer habilidade, pode ser aperfeiÃ§oada.
+
+Na busca do julgamento perfeito, \citeonline{Condorcet.1785} formaliza o primeiro método de decisão ótima, utilizando probabilidade para quantificar alternativas. \citeonline{Davenport.2007} enfatizam o uso de ferramentas analíticas e de tomada de decisão para reduzir incertezas, agregar racionalidade e obter inteligência competitiva. Mas, para \citeonline{Kahneman.2012}, apesar de as pessoas em geral serem racionais, com decisões lógicas e sensatas, emoções como medo, apego e ódio explicam na maioria dos casos a irracionalidade das escolhas. Para \citeonline{Ariely.2009}, essa conduta define o conceito de economia comportamental, que considera como as pessoas se comportam e não como deveriam se comportar. 
+
+É natural do ser humano estabelecer comparações para fundamentar suas decisões, sendo influenciado por forÃ§as racionais. Entretanto, as pessoas nem sempre são tão racionais, existindo diversas situações em que podemos contar com sua previsível irracionalidade \cite{Ariely.2012}. À vista disso, \citeonline{Mesquita.2009} defende o uso de ferramentas matemáticas que equacionem a predição de eventos de interação. Assim, introduz o uso da teoria dos jogos como mecanismo para entender comportamentos \cite[min.~2:17--2:37]{MesquitaTED.2009}.
+
+Originalmente estabelecida em \citeyear{Cournot.1838} por \citeauthoronline{Cournot.1838} a teoria alÃ§ou proeminência a partir do livro \emph{The Theory of Games and Economic Behavior} de \citeonline{Neumann.1947} que formalizou modelos matemáticos para estudo do comportamento econômico, nas interações entre agentes, em cenários de conflito ou cooperação. Transcendendo o ramo econômico, a teoria dos jogos ganhou aplicações em diversas áreas como: militar \cite{Haywood.1954,RAND.2004}, jurídica \cite{Rosa.2014}, biológica \cite{Smith.1982}, filosófica \cite{Lewis.2002} e política \cite{Levy.2003}. 
+
+No ambiente empresarial \citeonline{Golden.1993} discutem a aplicação da teoria dos jogos em alianÃ§as de cooperação e competições estratégicas e \citeonline{Wang.2007} destaca sua adoção como uma ferramenta de apoio para selecionar estratégias. \citeonline{Lygero.1996} utilizam modelos da teoria para desenvolver controles híbridos em sistemas complexos, \citeonline{Shen.2002} emprega a teoria para decisões de programação em ambiente de produção e \citeonline{Huang.2001} utiliza abordagem na paridade das relações de publicidade da cadeia de suprimentos fabricante--varejista.
+
+Para \citeonline{Campos.2012} não é raro que a aplicação dos conceitos de cadeia de suprimentos e logística\footnote{Logística é arte e ciência de mover as coisas de um lugar para outro e armazená-las ao longo do caminho \cite[p.~370]{Fawcett.2000}.} ocorra em um contexto multidisciplinar incorporando conhecimentos das áreas de custo, informática, estatística e matemática. \citeonline{Ayers.2006} delineia uma cadeia de suprimentos como um conjunto de empresas e pessoas que se relacionam trocando informações e produtos. Já o processo de GCS compreende atividades de decisão relacionadas Ã  organização deste ambiente \cite{Fredendall.2001} e abrange planejamento, controle e coordenação dos canais de distribuição (fornecedores, prestadores de serviÃ§o, intermediários, clientes) \cite{Panitz.2007}. No âmbito dessa conjuntura, a chave da cooperação entre empresas está em conseguir a unidade de motivação pelo alinhamento de incentivos \cite{Cao.2012}. 
+
+Uma cadeia de suprimentos é beneficiada pela colaboração entre seus membros, que pode ocorrer pelo compartilhamento de informações, conhecimentos, custos, riscos e recompensas \cite{Simatupang.2002}. Mesmo que as organizações constituam unidades autônomas, temos uma sequência ou rede de relações interdependentes que pode promover alianÃ§as estratégicas \cite{Chen.2004}. Em geral, a cooperação vem ganhando cada vez mais importância, principalmente em redes de alta complexidade \cite{Drechsel.2010} onde as decisões de cada um dos membros (agentes) afetam nas decisões dos demais e o acordo entre os agentes é a base da cooperação \cite{Young.1994}.
+
+Estudos sobre a aplicação da teoria dos jogos cooperativos no GCS versam como principal questão o gerenciamento harmonioso das decisões entre os elos da cadeia \cite{Dobos.2010a}. O pressuposto está na existência de uma estrutura comum entre agentes na qual o ganho ou custo seja compartilhado, seguindo critérios de justiÃ§a definidos por axiomas \cite{Bezerra.2009}. \citeonline{Brink.2002} caracteriza a propriedade de justiÃ§a e eficiência pelo modelo de jogo cooperativo \emph{Shapley Value}. 
+
+Introduzido em  \citeyear{Shapley.1952} por \citeauthoronline{Shapley.1952}, os mais recentes estudos do método --- análogo ou no domínio do GCS --- abarcam soluções nas ambiências do desenvolvimento sustentável \cite{Bakr.2015}, Internet das Coisas \cite{Militano.2016,Kim.2016}, redes sociais \cite{Kim.2016}, distribuição de lucros\footnote{Pesquisa sobre distribuição de lucros no \href{https://prod.campusexpress.upenn.edu/}{Campus Express Alliance}.} 
+\cite{Zhuang.2016}, gerenciamento de projetos \cite{Ding.2016}, análise de impacto econômico\footnote{Impacto da expansão do \href{http://www.pancanal.com/eng/maritime/routes.html}{Canal do Panamá} no mercado de contêineres.} \cite{Liu.2016}, grafos\footnote{Relação entre elementos de um conjunto \cite{Deza.2014} --- interação dos agentes em uma coalizão.} \cite{Khmelnitskaya.2016}, estudos na alocação de custos para \emph{e--commerce} \cite{Dong.2016}, logística \cite{DeVos.2016}, cooperação vertical e horizontal\footnote{\citeauthoronline{Defryn.2016} relatam um estudo de caso de cooperação logística horizontal no setor das frutas e produtos hortícolas frescos.} no gerenciamento de inventário e transporte \cite{DeVos.2016,Defryn.2016}.
+
+O presente artigo é uma abordagem sobre a execução do modelo \emph{Shapley Value} para equacionar a contribuição marginal entre agentes de uma CS. A precípua está no rateio do custo rodoviário itinerário --- comensurado em Km. Considerando uma hipotética coalizão formada por três fornecedores, adiciona-se indivíduos, um de cada vez, dando a cada um uma contribuição marginal $v(S \cup \{i\})$ --- $v(S)$ para $S$ indivíduos. À medida que os custos são ponderados atinge-se uma noção de justiÃ§a. A \autoref{sec:caso} estrutura a narrativa do caso de estudo. Na \autoref{sec:teoria} estuda-se os conceitos da teoria, exemplificando com o cenário fictício. A \autoref{sec:R} implementa o algoritmo na linguagem R\footnote{\citetext{R.2016}} --- viabilizando futuras simulações. Ademais, a \autoref{sec:conclusao} retoma a proposta adicionando um parecer de conclusão; e, enfim, a \autoref{sec:futuro} projetar novas lacunas com enlace para investigações em trabalhos futuros.
+
+% ----------------------------------------------------------
+% Estudo de caso
+% ----------------------------------------------------------
+\section{Estudo de caso}
+\label{sec:caso}
+
+<<echo=FALSE, warning=FALSE, results='markup', message=FALSE, highlight=TRUE, error=FALSE, fig.align='center', fig.show='hold', fig.pos='H', fig.cap='Custo dos itinerários'>>=
+
+coordUFRGS <- geocode('Porto Alegre')
+coordUFMS <- geocode('Belo Horizonte')
+coordUFRJ <-  geocode('Rio de Janeiro')
+coordAsuncion <-  geocode('Asuncion')
+coordUFPR <- geocode('Curitiba')
+
+df <- data.frame(longitude = c(coordUFPR[,1],
+                               coordUFRGS[,1],
+                               coordUFPR[,1],
+                               coordUFRJ[,1],
+                               coordUFPR[,1],
+                               coordUFMS[,1],
+                               coordUFPR[,1],
+                               coordAsuncion[,1],
+                               coordUFPR[,1],
+                               coordUFRGS[,1],
+                               coordAsuncion[,1],
+                               coordUFMS[,1],
+                               coordUFRJ[,1],
+                               coordUFRGS[,1]
+                               ),
+                 latitude =  c(coordUFPR[,2],
+                               coordUFRGS[,2],
+                               coordUFPR[,2],
+                               coordUFRJ[,2],
+                               coordUFPR[,2],
+                               coordUFMS[,2],
+                               coordUFPR[,2],
+                               coordAsuncion[,2],
+                               coordUFPR[,2],
+                               coordUFRGS[,2],
+                               coordAsuncion[,2],
+                               coordUFMS[,2],
+                               coordUFRJ[,2],
+                               coordUFRGS[,2]
+                              )
+                 )
+
+ggmap(get_googlemap('Parana', 
+                     markers = df, 
+                     path = df, 
+                     zoom = 5, 
+                     maptype = c('roadmap'),
+                     language = 'pt-BR')) + theme_gray() +
+      labs(x = 'Longitude', y = 'Latitude') + 
+      annotate('text',
+               x = -55.3, 
+               y = -28.1,
+               label = '5', 
+               color = 'Red',
+               size = 3.5) +
+      annotate('text',
+               x = -56.8, 
+               y = -22.5,
+               label = '5', 
+               color = 'Red',
+               size = 3.5) +
+      annotate('text',
+               x = -48.5, 
+               y = -21.0,
+               label = '5', 
+               color = 'Red',
+               size = 3.5) +
+      annotate('text',
+               x = -52.3, 
+               y = -23.4,
+               label = '4', 
+               color = 'Red',
+               size = 3.5) +
+      annotate('text',
+               x = -50.6, 
+               y = -27.0,
+               label = '4', 
+               color = 'Red',
+               size = 3.5) +
+      annotate('text',
+               x = -46.6, 
+               y = -27.0,
+               label = '5', 
+               color = 'Red',
+               size = 3.5) +
+      annotate('text',
+               x = -53.4, 
+               y = -24.8,
+               label = '3', 
+               color = 'Red',
+               size = 3.5) +
+      annotate('text',
+               x = -47.5, 
+               y = -24.1,
+               label = '3', 
+               color = 'Red',
+               size = 3.5) +
+      geom_point(aes(x = coordUFMS[,1], 
+                     y = coordUFMS[,2], 
+                 colour = "Origem - UFMS"), 
+                 alpha = 0.3, 
+                 size = 2,
+                 position = "jitter") +
+      geom_point(aes(x = coordUFPR[,1], 
+                     y = coordUFPR[,2], 
+                 colour = "Origem - UFPR"), 
+                 alpha = 0.3, 
+                 size = 1.4,
+                 position = "jitter") +
+      geom_point(aes(x = coordAsuncion[,1], 
+                     y = coordAsuncion[,2], 
+                 colour = "Origem - Assuncion"), 
+                 alpha = 0.3, 
+                 size = 2,
+                 position = "jitter") +
+      geom_point(aes(x = coordUFRJ[,1], 
+                     y = coordUFRJ[,2], 
+                 colour = "Origem - UFRJ"), 
+                 alpha = 0.3, 
+                 size = 2,
+                 position = "jitter") +
+      geom_point(aes(x = coordUFRGS[,1], 
+                     y = coordUFRGS[,2], 
+                 colour = "Destino - UFRGS"), 
+                 alpha = 0.3, 
+                 size = 4,
+                 position = "jitter") +
+      theme(legend.text = element_text(size = 7), legend.title = element_text(size = 10)) + 
+      labs(colour = "Agentes")
+@
+
+\begin{table}[!h]
+  \centering
+  \caption{Tabela de combinações de agentes e custo}
+  \label{Tab1}
+  \begin{tabular}{@{}cccccccccc@{}}
+  \toprule
+    $S$    & $\emptyset$ & $\{1\}$ & $\{2\}$ & $\{3\}$ & $\{1,2\}$ & $\{1,3\}$ & $\{2,3\}$ &     $\{1,2,3\}$ & $N$  \\ \midrule
+    $v(S)$ & $0$         & $5$     & $8$     & $5$     & $10$      & $10$      & $10$      &     $14$        & $14$ \\ \bottomrule
+  \end{tabular}
+\end{table}
+
+% ----------------------------------------------------------
+% Shapley value
+% ----------------------------------------------------------
+\section{\emph{Shapley Value}}
+\label{sec:teoria}
+
+\subsection{Conceito}
+
+Sendo $\forall$ $S \neq \emptyset$ e $S \subset N$
+
+\begin{equation}
+  \label{eq:shaVal}
+  \varphi _{i} = \sum_{S \subset N} \frac{(|s| - 1)!(n - |s|)!}{n!}[v(S)-v(S - i)]
+\end{equation}
+
+Shapley axiomas para $\varphi(v)$
+\begin{enumerate}
+  \item \textbf{Eficiência:} Toda alocação é distribuída sem disperídio $\sum_{i \in N} \varphi_i(v) - v(N)$.
+  \item \textbf{Simetria:} Se $i$ e $j$ são tal que $v(S \cup \{i\}) = v(S \cup \{j\})$ para cada coalisão $S$ não contenha $i$ e $j$, então $\varphi_i (v) = \varphi_j (v)$
+  \item \textbf{Linearidade:} Se dois agentes em uma coalizão, descritos pelas funões de ganho $\phi_i(v)$ e $\phi_i(w)$, são combinados, então os ganhos são correspondentes $\phi_i(v + w) = \phi_i(v) + \phi_i(w)$.
+  \item \textbf{Zero jogador:} Quando um jogador não contribui na cooperação sua alocação é nula.
+\end{enumerate}
+
+\subsection{Aplicação no estudo de caso}
+
+Para $i = 1$.
+
+\begin{subequations}
+  \tiny
+  \begin{equation}
+   \label{eq:shaValX1a}
+    x_{[1]} = \frac{0!2!}{3!}(c(\{1\}) - c(\emptyset)) +
+              \frac{1!1!}{3!}(c(\{1,2\}) - c(\{2\}) +
+              \frac{1!1!}{3!}(c(\{1,3\}) - c(\{3\}) +
+              \frac{2!0!}{3!}(c(\{1,2,3\}) - c(\{2,3\}) 
+  \end{equation}
+
+  $\therefore$
+
+  \begin{equation}
+   \label{eq:shaValX1b}
+    x_{[1]} = \frac{2}{6}(c(\{5 - 0\}) +
+              \frac{1}{6}(c(\{10 - 8\}) +
+              \frac{1}{6}(c(\{10 - 5\}) +
+              \frac{2}{6}(c(\{14 - 10\})
+  \end{equation}
+
+  $\therefore$
+
+  \begin{equation}
+   \label{eq:shaValX1c}
+    x_{[1]} = \frac{25}{6} \cong 4,1667
+   \end{equation}
+\end{subequations}                  
+
+Para $i = 2$.
+
+\begin{subequations}
+  \tiny
+  \begin{equation}
+   \label{eq:shaValX2a}
+    x_{[2]} = \frac{0!2!}{3!}(c(\{2\}) - c(\emptyset)) +
+              \frac{1!1!}{3!}(c(\{1,2\}) - c(\{1\}) +
+              \frac{1!1!}{3!}(c(\{2,3\}) - c(\{3\}) +
+              \frac{2!0!}{3!}(c(\{1,2,3\}) - c(\{1,3\}) 
+  \end{equation}
+
+  $\therefore$
+
+  \begin{equation}
+   \label{eq:shaValX2b}
+    x_{[2]} = \frac{2}{6}(c(\{8 - 0\}) +
+              \frac{1}{6}(c(\{10 - 5\}) +
+              \frac{1}{6}(c(\{10 - 5\}) +
+              \frac{2}{6}(c(\{14 - 10\})
+  \end{equation}
+
+  $\therefore$
+
+  \begin{equation}
+   \label{eq:shaValX2c}
+    x_{[2]} = \frac{34}{6} \cong 5,6667
+   \end{equation}
+\end{subequations}                  
+
+Para $i = 3$.
+
+\begin{subequations}
+  \tiny
+  \begin{equation}
+   \label{eq:shaValX3a}
+    x_{[3]} = \frac{0!2!}{3!}(c(\{3\}) - c(\emptyset)) +
+              \frac{1!1!}{3!}(c(\{1,3\}) - c(\{1\}) +
+              \frac{1!1!}{3!}(c(\{2,3\}) - c(\{2\}) +
+              \frac{2!0!}{3!}(c(\{1,2,3\}) - c(\{1,2\}) 
+  \end{equation}
+  
+  $\therefore$
+  
+  \begin{equation}
+   \label{eq:shaValX3b}
+    x_{[3]} = \frac{2}{6}(c(\{5 - 0\}) +
+              \frac{1}{6}(c(\{10 - 5\}) +
+              \frac{1}{6}(c(\{10 - 8\}) +
+              \frac{2}{6}(c(\{14 - 10\})
+  \end{equation}
+
+  $\therefore$
+
+  \begin{equation}
+   \label{eq:shaValX3c}
+    x_{[3]} = \frac{25}{6} \cong 4,1667
+   \end{equation}
+\end{subequations}                  
+
+A solução para o vetor $x$ é:
+
+\begin{equation}
+ \label{eq:shaValXSol}
+  x = \left ( 
+        \frac{25}{6}; \
+        \frac{34}{6}; \
+        \frac{25}{6}
+      \right ) 
+\end{equation}
+
+$\therefore$
+
+\begin{equation}
+ \label{eq:shaValXSolApx}
+  x \cong \left (4,1667; 5,6667; 4,1667 \right ) 
+\end{equation}
+
+Onde:
+
+\begin{equation}
+ \label{eq:shaValXProva}
+  x = \left ( 
+        \frac{25}{6} +
+        \frac{34}{6} +
+        \frac{25}{6}
+      \right )
+\end{equation}
+
+$\because$
+
+\begin{equation}
+ \label{eq:shaValXPorque}
+ \sum_{i = 1}^{3}x_i = 14 = c(N)
+\end{equation}
+
+\subsection{Implementac{c}ão computacional para o estudo de caso}
+
+  \texttt{\color{red}...linguagem R e pacotes da seção...}
+  \begin{itemize}
+    \item R: A Language and Environment for Statistical Computing \cite{R.2016}
+    \item scales: Scale Functions for Visualization \cite{Wickham.2015}
+    \item ggplot2: Elegant Graphics for Data Analysis \cite{Wickham.2009}
+  \end{itemize}
+
+\section{algoritmo}
+\label{sec:R}
+
+<<echo=TRUE, warning=FALSE, results='markup', message=FALSE, highlight=FALSE, error=FALSE, fig.show='hide', background='gray95'>>=
+
+# Define os custos de coalisoes
+coalisoesAgentes <- c(5, 8, 5, 10, 10, 10, 14)
+
+# Nomes dos agentes/jogadores
+nomesAgentes <- c('[1] Origem - Assuncion','[2] Origem - UFMS','[3] Origem - UFRJ')
+
+# Define jogo com tres jogadores/agentes
+definicaoJogo   <- DefineGame(3, coalisoesAgentes)
+
+# Demonstra as coalisoes e res  pectivos custos
+summary(definicaoJogo)
+
+# Calcula o Shapley Value
+shapleyValue <- ShapleyValue(x = definicaoJogo, 
+                             Names = nomesAgentes)
+
+# Guarda o resultado
+shapleyValue <- summary(shapleyValue)
+
+@
+
+<<echo=FALSE, warning=FALSE, results='hide', message=FALSE, highlight=FALSE, error=FALSE, fig.show='hold', fig.align='center', fig.cap='Cálculo do Shapley Value', fig.pos='H', fig.height=3, fig.width=6>>=
+
+# Exibe grafico com os resultados
+ggplot(data = shapleyValue, 
+       aes(x = nomesAgentes, 
+           y = shapleyValue[,1], 
+           fill = nomesAgentes)) +
+       geom_bar(width = 0.9, stat = 'identity') +
+       theme_gray(base_size = 11, base_family = '') +
+       theme(legend.position='none', 
+             panel.grid.minor = element_blank(), 
+             axis.line = element_line(size = 0.3, 
+                                      colour = 'black')) +
+       labs(title = 'Resultado do cálculo do Shapley Value', 
+            x = 'Agentes', 
+            y = 'Shapley Value') +
+       scale_y_continuous(expand = c(0, 0), labels = waiver()) + 
+       scale_x_discrete(expand = c(0, 0))
+@
+
+
+  \texttt{\color{red}...seguem referências para completar seção...}
+  \begin{itemize}
+    \item Aircraft Landing Fees: A Game Theory Approach \cite{Littlechild.1977}
+    \item The Shapley value: essays in honor of Lloyd S. Shapley \cite{Alvin.1988}
+    \item Lloyd Shapley's Matching and Game Theory \cite{Serrano.2013}
+    \item Cooperative Game Theory and Applications: Cooperative Games Arising from Combinatorial Optimization Problems \cite{Curiel.2013}
+    \item On axiomatizations of the Shapley value for assignment games \cite{Brink.2015}
+  \end{itemize}
+
+% ---
+% Finaliza a parte no bookmark do PDF, para que se inicie o bookmark na raiz
+% ---
+\bookmarksetup{startatroot}% 
+% ---
+
+% ---
+% Conclusão
+% ---
+\section{Conclusão}
+\label{sec:conclusao}
+
+\begin{citacao}
+  Podemos ter uma consciência difusa dos demônios que nos espreitam lá fora. Podemos até estar bastante preocupados com eles. Mas, na realidade, não temos ideia de quantos são e de quando podem atacar \cite{Nate.2012}.
+\end{citacao}
+
+\begin{citacao}
+
+[...] toda medição e todo número do mundo real tem um quê de imprecisão, de incerteza. Trata-se de um reflexo imperfeito da realidade. Números são sempre impuros: uma mescla de verdade, erro e incerteza \cite{Seife.2012}.
+
+\end{citacao}
+
+
+\begin{citacao}
+$\left [ ... \right ]$ os objetos primários de nossas percepções morais são as ações de outros homens; além disso, nossos juízos morais sobre nossa própria conduta são apenas aplicações, sobre nós mesmos, de decisões já proferidas a respeito da conduta do nosso próximo \cite{Smith.1999}.
+\end{citacao}
+
+\begin{citacao}
+  A teoria dos jogos parte do ponto que as pessoas estão buscando o que é bom para elas. O que não parece ser tão chocante embora controverso para muitas pessoas: somos interessados em nós mesmos. E para buscar o que é melhor para si ou o que imaginamos ser melhor, as pessoas têm valores --- elas identificam o que querem e o que não querem \cite[min.~2:17--2:37]{MesquitaTED.2009}. 
+\end{citacao}
+
+
+\begin{citacao}
+As paixões podem nos motivar a agir, mas nem sempre são suficientes para prevalecer sobre todas as razões; da mesma forma, as razões, sozinhas, não são tão fortes que garantam que uma ação aconteÃ§a. Algumas vezes é preciso um \textbf{acordo} para resolver os nossos dilemas do prisioneiro \emph{internos}, o que envolve a possibilidade de cooperação na escolha que temos de fazer ao longo do tempo entre "prêmios", tais como recompensas, punições e sentimentos de culpa \cite[p.~132]{Pimentel.2007}.
+\end{citacao}
+
+
+  \texttt{\color{red}...seguem referências para completar seção...}
+  \begin{itemize}
+    \item O andar do bébado \cite{Mlodinow.2009}
+    \item Os n\'umeros (não) mentem: Como a matemática pode ser usada para enganar você \cite{Seife.2012}
+    \item O sinal e o ruído \cite{Nate.2012}
+    \item R{á}pido e devagar: Duas formas de pensar \cite{Kahneman.2012}
+    \item Subliminar: Como o inconsciente influencia nossas vidas \cite{Mlodinow.2013}
+    \item O poder do h{á}bito: Por que fazemos o que fazemos na vida e nos neg{ó}cios \cite{Duhigg.2012}
+    \item O sinal e o ruído \cite{Nate.2012}
+  \end{itemize}
+
+\section{Trabalhos futuros}
+\label{sec:futuro}
+  \texttt{\color{red}...seguem referências para completar seção...}
+  \begin{itemize}
+    \item Games with incomplete information played by ''Bayesian'' players part II. Bayesian equilibrium points \cite{Harsanyi.1968}
+    \item Equilibrium points in n-person games \cite{Nash.1950}
+    \item Two-person cooperative games \cite{Nash.1953}
+    \item Quantum games \cite{JoseFigueiredo.2004}
+    \item Quantum games and quantum strategies \cite{Eisert.1999}
+    \item Nash equilibria in quantum games with generalized two-parameter strategies \cite{Flitney.2007}
+    \item Quantum cooperative games \cite{Iqbal.2002},\cite{Dai.2004}
+    \item A probabilistic approach to quantum Bayesian games of incomplete information \cite{Iqbal.2014}
+    \item Social optimality in quantum Bayesian games \cite{Azhar.2015}
+  \end{itemize}
+
+% ----------------------------------------------------------
+% ELEMENTOS PÓS-TEXTUAIS
+% ----------------------------------------------------------
+\postextual
+
+% ---
+% Título e resumo em língua estrangeira
+% ---
+
+% \twocolumn[    		% INICIO DE ARTIGO EM DUAS COLUNAS
+
+% ]  				        % FIM DE ARTIGO EM DUAS COLUNAS
+% ---
+
+% ----------------------------------------------------------
+% Referências bibliográficas
+% ----------------------------------------------------------
+\bibliography{references}
+
+\end{document}
+
+% ----------------------------------------------------------
+% Glossário
+% ----------------------------------------------------------
+%
+% Há diversas soluções prontas para glossário em LaTeX. 
+% Consulte o manual do abnTeX2 para obter sugestões.
+%
+%\glossary
+
+% ----------------------------------------------------------
+% Apêndices
+% ----------------------------------------------------------
+
+% ---
+% Inicia os apêndices
+% ---
+\begin{apendicesenv}
+
+% ----------------------------------------------------------
+\chapter{}
+% ----------------------------------------------------------
+
+\end{apendicesenv}
+% ---
+
+% ----------------------------------------------------------
+% Anexos
+% ----------------------------------------------------------
+\cftinserthook{toc}{AAA}
+% ---
+% Inicia os anexos
+% ---
+%\anexos
+\begin{anexosenv}
+
+% ---
+\chapter{}
+% ---
+
+\end{anexosenv}

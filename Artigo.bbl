@@ -1,0 +1,502 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.3 }
+
+\bibitem[Ariely 2009]{Ariely.2009}
+\abntrefinfo{Ariely}{ARIELY}{2009}
+{ARIELY, D. \emph{Predictably Irrational: The Hidden Forces that Shape Our
+  Decisions}. [S.l.]: HarperCollins Publishers, 2009.
+ISBN 9780007319923.}
+
+\bibitem[Ariely 2012]{Ariely.2012}
+\abntrefinfo{Ariely}{ARIELY}{2012}
+{ARIELY, D. \emph{The (Honest) Truth About Dishonesty}: How we lie to everyone
+  -- especially ourselves. [S.l.]: HarperCollins Publishers, 2012.
+ISBN 9780007477340.}
+
+\bibitem[Ayers 2006]{Ayers.2006}
+\abntrefinfo{Ayers}{AYERS}{2006}
+{AYERS, J.~B. \emph{Handbook of Supply Chain Management}. 2. ed. [S.l.]:
+  Auerbach Publications, 2006.
+ISBN 9781420013009.}
+
+\bibitem[Bakr e Cranefield 2015]{Bakr.2015}
+\abntrefinfo{Bakr e Cranefield}{BAKR; CRANEFIELD}{2015}
+{BAKR, S.; CRANEFIELD, S. Using the shapley value for fair consumer
+  compensation in energy demand response programs: Comparing algorithms.
+In:  \underline{\ \ \ \ \ \ \ \ }. \emph{IEEE 2015 IEEE International
+  Conference on Data Science and Data Intensive Systems (DSDIS)}. [S.l.: s.n.],
+  2015.
+ISBN 978-1-5090-0214-6.}
+
+\bibitem[Bekman e Neto 2009]{Bekman.2009}
+\abntrefinfo{Bekman e Neto}{BEKMAN; NETO}{2009}
+{BEKMAN, O.~R.; NETO, P. L. O.~C. An\'alise estat\'{\i}stica da decis\~ao.
+In:  \underline{\ \ \ \ \ \ \ \ }. 2. ed. S\~ao Paulo, Brasil: Blucher, 2009.
+  cap. Introdu\c{c}\~ao \`a teoria dos jogos, p. 122--140.
+ISBN 978-85-212-0468-8.}
+
+\bibitem[Bezerra, Grande e Silva 2009]{Bezerra.2009}
+\abntrefinfo{Bezerra, Grande e Silva}{BEZERRA; GRANDE; SILVA}{2009}
+{BEZERRA, F.~A.; GRANDE, J.~F.; SILVA, A.~J. da. An{\'a}lise e
+  caracteriza\c{c}{\~a}o de modelos de custos que utilizam o valor de shapley
+  para aloca\c{c}{\~a}o de custos entre departamentos.
+\emph{Gest{\~a}o \& Produ\c{c}{\~a}o}, SciELO - Scientific Electronic Library
+  Online, S{\~a}o Paulo, Brasil, v.~16, p. 74--84, 03 2009.
+ISSN 0104-530X.
+Dispon{\'\i}vel em:
+  \url{http://www.scielo.br/scielo.php?script=sci\_arttext&pid=S0104-530X2009000100008&nrm=iso}.}
+
+\bibitem[Brink 2002]{Brink.2002}
+\abntrefinfo{Brink}{BRINK}{2002}
+{BRINK, R. van~den. An axiomatization of the shapley value using a fairness
+  property.
+\emph{International Journal of Game Theory}, Springer-Verlag, v.~30, 03 2002.}
+
+\bibitem[Brink e Pint{\'e}r 2015]{Brink.2015}
+\abntrefinfo{Brink e Pint{\'e}r}{BRINK; PINT{\'E}R}{2015}
+{BRINK, R. van~den; PINT{\'E}R, M. On axiomatizations of the shapley value for
+  assignment games.
+\emph{Journal of Mathematical Economics}, v.~60, p. 110--114, 10 2015.
+ISSN 0304-4068.}
+
+\bibitem[Campos 2012]{Campos.2012}
+\abntrefinfo{Campos}{CAMPOS}{2012}
+{CAMPOS, A. J.~C. \emph{A Gest\~ao da Cadeia de Suprimentos}. Curitiba, PR:
+  Iesde Brasil SA, 2012.
+ISBN 978-85-387-2843-6.}
+
+\bibitem[Cao e Zhang 2012]{Cao.2012}
+\abntrefinfo{Cao e Zhang}{CAO; ZHANG}{2012}
+{CAO, M.; ZHANG, Q. \emph{Supply Chain Collaboration: Roles of
+  Interorganizational Systems, Trust, and Collaborative Culture}. [S.l.]:
+  Springer London, 2012.
+ISBN 9781447145905.}
+
+\bibitem[Chen e Paulraj 2004]{Chen.2004}
+\abntrefinfo{Chen e Paulraj}{CHEN; PAULRAJ}{2004}
+{CHEN, I.~J.; PAULRAJ, A. Towards a theory of supply chain management: the
+  constructs and measurements.
+\emph{Journal of Operations Management}, Elsevier Science, v.~22, 2004.}
+
+\bibitem[Condorcet 1785]{Condorcet.1785}
+\abntrefinfo{Condorcet}{CONDORCET}{1785}
+{CONDORCET, M. J. A. N.~C. \emph{Essai sur l'application de l'analyse à la
+  probabilit\'e des d\'ecisions rendues \`a la pluralit\'e des voix}. Paris,
+  Fran\c{c}a: A Paris: de l'Imprimerie royale, 1785. Dispon{\'\i}vel em:
+  \url{http://www.e-rara.ch/zut/content/titleinfo/1175327}.}
+
+\bibitem[Cournot 1838]{Cournot.1838}
+\abntrefinfo{Cournot}{COURNOT}{1838}
+{COURNOT, A. \emph{Principes Math\'ematiques}: Th\'eorie des richesses. Paris,
+  France: Chez L. Hachette -- Libraire de l'universit\'e Royale de France,
+  1838. Dispon{\'\i}vel em:
+  \url{http://gallica.bnf.fr/ark:/12148/bpt6k6117257c/f10.item.zoom}.}
+
+\bibitem[Curiel 1997]{Curiel.2013}
+\abntrefinfo{Curiel}{CURIEL}{1997}
+{CURIEL, I. \emph{Cooperative Game Theory and Applications: Cooperative Games
+  Arising from Combinatorial Optimization Problems}. [S.l.]: Springer
+  Science+Business Media Dordrecht, 1997. v.~16.
+ISBN 9781475748710.}
+
+\bibitem[Davenport e Harris 2007]{Davenport.2007}
+\abntrefinfo{Davenport e Harris}{DAVENPORT; HARRIS}{2007}
+{DAVENPORT, T.~H.; HARRIS, J.~G. \emph{Competing on Analytics}. [S.l.]: Harvard
+  Business Review Press, 2007.
+ISBN 9781422156308.}
+
+\bibitem[{De Vos} e Raa 2016]{DeVos.2016}
+\abntrefinfo{{De Vos} e Raa}{{De Vos}; RAA}{2016}
+{{De Vos}, B.; RAA, B. Vertical and horizontal collaboration in inventory and
+  transportation.
+In:  \underline{\ \ \ \ \ \ \ \ }. \emph{Computational Management Science}.
+  Springer International Publishing, 2016.  (Lecture Notes in Economics and
+  Mathematical Systems, v.~682), p. 99--104.
+ISBN 978-3-319-20430-7.
+Dispon{\'\i}vel em:
+  \url{http://link.springer.com/chapter/10.1007/978-3-319-20430-7\_13}.}
+
+\bibitem[Deza e Deza 2014]{Deza.2014}
+\abntrefinfo{Deza e Deza}{DEZA; DEZA}{2014}
+{DEZA, M.~M.; DEZA, E. Distances in graph theory.
+In:  \underline{\ \ \ \ \ \ \ \ }. \emph{Encyclopedia of Distances}. 3. ed.
+  Paris, France: Springer-Verlag Berlin Heidelberg, 2014. cap.~15, p. 275--307.
+ISBN 978-3-662-44341-5.}
+
+\bibitem[Ding et al. 2016]{Ding.2016}
+\abntrefinfo{Ding et al.}{DING et al.}{2016}
+{DING, H. et al. Game analysis and benefit allocation in international projects
+  among owner, supervisor and contractor.
+\emph{International Journal of General Systems}, Taylor and Francis Group, 03
+  2016.
+Dispon{\'\i}vel em:
+  \url{http://www.tandfonline.com/doi/full/10.1080/03081079.2015.1086575}.}
+
+\bibitem[Dobos e Pint{\'e}r 2010]{Dobos.2010a}
+\abntrefinfo{Dobos e Pint{\'e}r}{DOBOS; PINT{\'E}R}{2010}
+{DOBOS, I.; PINT{\'E}R, M. Cooperation in supply chains: A cooperative game
+  theoretic analysis.
+Budapest, Hungary, 09 2010.
+ISSN 1786--3031.}
+
+\bibitem[Dong, Wu e Li 2016]{Dong.2016}
+\abntrefinfo{Dong, Wu e Li}{DONG; WU; LI}{2016}
+{DONG, M.; WU, A. ping; LI, H. Studying cost allocation in joint distribution
+  for e-commerce: A small to medium size logistic firm's perspective.
+In:  \underline{\ \ \ \ \ \ \ \ }. \emph{Proceedings of the 22nd International
+  Conference on Industrial Engineering and Engineering Management 2015: Core
+  Theory and Applications of Industrial Engineering (Volume 1)}. Paris, France:
+  Atlantis Press, 2016. p. 379--385.
+ISBN 978-94-6239-180-2.
+Dispon{\'\i}vel em: \url{http://dx.doi.org/10.2991/978-94-6239-180-2\_37}.}
+
+\bibitem[Drechsel 2010]{Drechsel.2010}
+\abntrefinfo{Drechsel}{DRECHSEL}{2010}
+{DRECHSEL, J. \emph{Cooperative Lot Sizing Games in Supply Chains}. Springer
+  Berlin Heidelberg, 2010.
+ISBN 9783642137259. Dispon{\'\i}vel em:
+  \url{http://www.springer.com/us/book/9783642137242}.}
+
+\bibitem[Duhigg 2012]{Duhigg.2012}
+\abntrefinfo{Duhigg}{DUHIGG}{2012}
+{DUHIGG, C. \emph{O poder do h{\'a}bito: Por que fazemos o que fazemos na vida
+  e nos neg{\'o}cios}. [S.l.]: Companhia das Letras, 2012.
+ISBN 9788539004256.}
+
+\bibitem[Eisert, Wilkens e Lewenstein 1999]{Eisert.1999}
+\abntrefinfo{Eisert, Wilkens e Lewenstein}{EISERT; WILKENS; LEWENSTEIN}{1999}
+{EISERT, J.; WILKENS, M.; LEWENSTEIN, M. Quantum games and quantum strategies.
+\emph{Physical Review Letters}, APS, v.~83, n.~15, p.~3077, 1999.}
+
+\bibitem[Fawcett 2000]{Fawcett.2000}
+\abntrefinfo{Fawcett}{FAWCETT}{2000}
+{FAWCETT, S.~E. Logistics: Meeting customers' real needs.
+In:  \underline{\ \ \ \ \ \ \ \ }. \emph{Encyclopedia of Production and
+  Manufacturing Management}. Norwell, Massachusetts, USA: Kluwer Academic
+  Publishers, 2000.  (Encyclopedia of Production and Manufacturing Management),
+  cap.~L, p. 370--381.
+ISBN 9780792386308.}
+
+\bibitem[Figueiredo 2004]{JoseFigueiredo.2004}
+\abntrefinfo{Figueiredo}{FIGUEIREDO}{2004}
+{FIGUEIREDO, J. M. A.~F. Quantum games.
+\emph{Physica A: Statistical Mechanics and its Applications}, Elsevier Science,
+  v.~335, 2004.}
+
+\bibitem[Flitney e Hollenberg 2007]{Flitney.2007}
+\abntrefinfo{Flitney e Hollenberg}{FLITNEY; HOLLENBERG}{2007}
+{FLITNEY, A.~P.; HOLLENBERG, L.~C. Nash equilibria in quantum games with
+  generalized two-parameter strategies.
+\emph{Physics Letters A}, Elsevier Science, v.~363, 2007.}
+
+\bibitem[Fredendall 2001]{Fredendall.2001}
+\abntrefinfo{Fredendall}{FREDENDALL}{2001}
+{FREDENDALL, L.~D. \emph{Basics of Supply Chain Management}. [S.l.]: CRC Press,
+  2001.
+ISBN 9781420025767.}
+
+\bibitem[Golden e Dollinger 1993]{Golden.1993}
+\abntrefinfo{Golden e Dollinger}{GOLDEN; DOLLINGER}{1993}
+{GOLDEN, P.~A.; DOLLINGER, M. Cooperative alliances and competitive strategies
+  in small manufacturing firms.
+\emph{Entrepreneurship: Theory and Practice}, Baylor University, v.~17, n.~4,
+  p. 43--57, 1993.}
+
+\bibitem[Harsanyi 1968]{Harsanyi.1968}
+\abntrefinfo{Harsanyi}{HARSANYI}{1968}
+{HARSANYI, J.~C. Games with incomplete information played by ''bayesian''
+  players part ii. bayesian equilibrium points.
+\emph{Management Science}, INFORMS, University of Maryland, USA, v.~14, n.~5,
+  p. 320--334, 1968.}
+
+\bibitem[Haywood 1954]{Haywood.1954}
+\abntrefinfo{Haywood}{HAYWOOD}{1954}
+{HAYWOOD, O.~G. Military decision and game theory.
+\emph{Journal of the Operations Research Society of America}, INFORMS, London,
+  UK, v.~2, n.~4, p. 365--385, 1954.
+ISSN 00963984.
+Dispon{\'\i}vel em:
+  \url{http://www.jstor.org/stable/166693?seq=1\#page\_scan\_tab\_contents}.}
+
+\bibitem[Huang e Li 2001]{Huang.2001}
+\abntrefinfo{Huang e Li}{HUANG; LI}{2001}
+{HUANG, Z.; LI, S.~X. Co--op advertising models in manufacturer-–retailer
+  supply chains: A game theory approach.
+\emph{European Journal of Operational Research}, Elsevier Science, v.~135,
+  2001.}
+
+\bibitem[Iqbal, Chappell e Abbott 2015]{Azhar.2015}
+\abntrefinfo{Iqbal, Chappell e Abbott}{IQBAL; CHAPPELL; ABBOTT}{2015}
+{IQBAL, A.; CHAPPELL, J.~M.; ABBOTT, D. Social optimality in quantum bayesian
+  games.
+\emph{Physica A: Statistical Mechanics and its Applications}, Elsevier Science,
+  v.~436, 10 2015.}
+
+\bibitem[Iqbal et al. 2014]{Iqbal.2014}
+\abntrefinfo{Iqbal et al.}{IQBAL et al.}{2014}
+{IQBAL, A. et al. A probabilistic approach to quantum bayesian games of
+  incomplete information.
+\emph{Quantum Information Processing}, Springer US, v.~13, 12 2014.}
+
+\bibitem[Iqbal e Toor 2002]{Iqbal.2002}
+\abntrefinfo{Iqbal e Toor}{IQBAL; TOOR}{2002}
+{IQBAL, A.; TOOR, A. Quantum cooperative games.
+\emph{Physics Letters A}, Elsevier Science, v.~293, 2002.}
+
+\bibitem[Kahneman 2012]{Kahneman.2012}
+\abntrefinfo{Kahneman}{KAHNEMAN}{2012}
+{KAHNEMAN, D. \emph{R{\'a}pido e devagar: Duas formas de pensar}. [S.l.]:
+  Companhia das Letras, 2012.
+ISBN 9788539004010.}
+
+\bibitem[Khmelnitskaya 2016]{Khmelnitskaya.2016}
+\abntrefinfo{Khmelnitskaya}{KHMELNITSKAYA}{2016}
+{KHMELNITSKAYA, A. The shapley value for directed graph games.
+\emph{Operations Research Letters}, Elsevier Science, v.~44, 01 2016.}
+
+\bibitem[Kim 2016]{Kim.2016}
+\abntrefinfo{Kim}{KIM}{2016}
+{KIM, S. Asymptotic shapley value based resource allocation scheme for iot
+  services.
+\emph{Computer Networks}, Elsevier Science, v.~100, 05 2016.}
+
+\bibitem[Knight 1921]{Knigth.1921}
+\abntrefinfo{Knight}{KNIGHT}{1921}
+{KNIGHT, F.~H. \emph{Risk, Uncertainty and Profit}. New York, EUA: Houghton
+  Mifflin Company, 1921.}
+
+\bibitem[Levy e Razin 2003]{Levy.2003}
+\abntrefinfo{Levy e Razin}{LEVY; RAZIN}{2003}
+{LEVY, G.; RAZIN, R. It takes two: An explanation of the democratic peace.
+Centre for Economic Policy Research -- CEPR, London, UK, n.~3947, 2003.
+Dispon{\'\i}vel em:
+  \url{http://papers.ssrn.com/sol3/papers.cfm?abstract\_id=433844}.}
+
+\bibitem[Lewis 2002]{Lewis.2002}
+\abntrefinfo{Lewis}{LEWIS}{2002}
+{LEWIS, D. \emph{Convention}: A philosophical study. Oxford, UK: Blackwell
+  Publishers, 2002.
+ISBN 978-0-631-23256-8.}
+
+\bibitem[Littlechild e Thompson 1977]{Littlechild.1977}
+\abntrefinfo{Littlechild e Thompson}{LITTLECHILD; THOMPSON}{1977}
+{LITTLECHILD, S.~C.; THOMPSON, G.~F. Aircraft landing fees: A game theory
+  approach.
+\emph{The Bell Journal of Economics}, The RAND Corporation, v.~8, 1977.}
+
+\bibitem[Liu, Wilson e Luo 2016]{Liu.2016}
+\abntrefinfo{Liu, Wilson e Luo}{LIU; WILSON; LUO}{2016}
+{LIU, Q.; WILSON, W.~W.; LUO, M. The impact of panama canal expansion on the
+  container-shipping market: a cooperative game theory approach.
+\emph{Maritime Policy \& Management}, Taylor and Francis Group, v.~43, 02 2016.
+Dispon{\'\i}vel em:
+  \url{http://www.tandfonline.com/doi/abs/10.1080/03088839.2015.1131863}.}
+
+\bibitem[Lu e Bock 2016]{Defryn.2016}
+\abntrefinfo{Lu e Bock}{LU; BOCK}{2016}
+{Gain sharing in horizontal logistic co--operation: A case study in the fresh
+  fruit and vegetables sector.
+In:  LU, M.; BOCK, J.~D. (Ed.). \emph{Sustainable Logistics and Supply Chains:
+  Innovations and Integral Approaches}. Springer International Publishing,
+  2016.  (Contributions to Management Science), p. 75--89.
+ISBN 978-3-319-17419-8.
+Dispon{\'\i}vel em: \url{http://dx.doi.org/10.1007/978-3-319-17419-8\_4}.}
+
+\bibitem[Lygero, Godbole e Sastry 1996]{Lygero.1996}
+\abntrefinfo{Lygero, Godbole e Sastry}{LYGERO; GODBOLE; SASTRY}{1996}
+{LYGERO, J.; GODBOLE, D.~N.; SASTRY, S. Multiagent hybrid system design using
+  game theory and optimal control. In:  . [S.l.]: Proceedings of the 35th ---
+  Conference on Decision and Control, 1996. v.~2.
+ISBN 0-7803-3590-2.}
+
+\bibitem[Mesquita 2009]{MesquitaTED.2009}
+\abntrefinfo{Mesquita}{MESQUITA}{2009a}
+{MESQUITA, B.~B. de. \emph{A prediction for the future of Iran}. Long Beach,
+  California, USA: TED Conferences, 2009.
+On-line. 18:55 min.
+Dispon{\'\i}vel em:
+  \url{https://www.ted.com/talks/bruce\_bueno\_de\_mesquita\_predicts\_iran\_s\_future?language=pt-br\#t-144952}.}
+
+\bibitem[Mesquita 2009]{Mesquita.2009}
+\abntrefinfo{Mesquita}{MESQUITA}{2009b}
+{MESQUITA, B.~B. de. \emph{The Predictioneer's Game}: Using the logic of brazen
+  self-interest to see and shape the future. [S.l.]: Random House Publishing
+  Group, 2009.
+ISBN 9781588369086.}
+
+\bibitem[Militano et al. 2016]{Militano.2016}
+\abntrefinfo{Militano et al.}{MILITANO et al.}{2016}
+{MILITANO, L. et al. Enhancing the navigability in a social network of smart
+  objects: A shapley-value based approach.
+\emph{Computer Networks}, Elsevier Science, v.~103, p. 1--14, 2016.
+ISSN 1389-1286.
+Dispon{\'\i}vel em:
+  \url{http://www.sciencedirect.com/science/article/pii/S1389128616300743}.}
+
+\bibitem[Mlodinow 2009]{Mlodinow.2009}
+\abntrefinfo{Mlodinow}{MLODINOW}{2009}
+{MLODINOW, L. \emph{O andar do b\'ebado}: Como o acaso determina nossas vidas.
+  Rio de Janeiro, RJ: Zahar, 2009.
+ISBN 9788537801550.}
+
+\bibitem[Mlodinow 2013]{Mlodinow.2013}
+\abntrefinfo{Mlodinow}{MLODINOW}{2013}
+{MLODINOW, L. \emph{Subliminar: Como o inconsciente influencia nossas vidas}.
+  [S.l.]: Zahar, 2013.
+ISBN 9788537810538.}
+
+\bibitem[Nash 1950]{Nash.1950}
+\abntrefinfo{Nash}{NASH}{1950}
+{NASH, J. Equilibrium points in n-person games.
+\emph{Proceedings of the National Academy of Sciences of the United States of
+  America}, v.~36, n.~1, p. 48--49, 1950.
+Dispon{\'\i}vel em: \url{http://www.calpoly.edu/~aamendes/GTweb/Nash.pdf}.}
+
+\bibitem[Nash 1953]{Nash.1953}
+\abntrefinfo{Nash}{NASH}{1953}
+{NASH, J. Two-person cooperative games.
+\emph{Econometrica: Journal of the Econometric Society}, JSTOR, p. 128--140,
+  1953.}
+
+\bibitem[Neumann e Morgenstern 1947]{Neumann.1947}
+\abntrefinfo{Neumann e Morgenstern}{NEUMANN; MORGENSTERN}{1947}
+{NEUMANN, J. von; MORGENSTERN, O. \emph{Theory of Games and Economic Behavior}.
+  [S.l.]: Princeton University Press, 1947.}
+
+\bibitem[Panitz 2007]{Panitz.2007}
+\abntrefinfo{Panitz}{PANITZ}{2007}
+{PANITZ, C.~E. \emph{Dicion\'ario de Log\'{\i}stica: Gest\~ao de cadeia de
+  suprimentos e Opera{\c{c}}oes}. S\~ao Paulo, Brasil: Alternativa, 2007.
+ISBN 9788587658166.}
+
+\bibitem[Pimentel 2007]{Pimentel.2007}
+\abntrefinfo{Pimentel}{PIMENTEL}{2007}
+{PIMENTEL, E. L.~A. \emph{Dilema do prisioneiro}: da teoria dos jogos {\`a}
+  {\'e}tica. [S.l.]: Argumentum, 2007.
+ISBN 9788598885155.}
+
+\bibitem[{R Development Core Team} 2016]{R.2016}
+\abntrefinfo{{R Development Core Team}}{{R Development Core Team}}{2016}
+{{R Development Core Team}. \emph{R: A Language and Environment for Statistical
+  Computing}.
+Vienna, Austria, 2016. {ISBN} 3-900051-07-0. Dispon{\'\i}vel em:
+  \url{http://www.R-project.org}.}
+
+\bibitem[RAND 2004]{RAND.2004}
+\abntrefinfo{RAND}{RAND}{2004}
+{RAND. \emph{Using Game Theory to Analyze Operations Against Time--Critical
+  Targets}. Santa Monica, California, USA: RAND Projet Air Force, 2004.}
+
+\bibitem[Rosa 2014]{Rosa.2014}
+\abntrefinfo{Rosa}{ROSA}{2014}
+{ROSA, A.~M. da. \emph{A Teoria dos Jogos Aplicada ao Processo Penal}. 1. ed.
+  [S.l.]: Letras e Conceitos Ltda, 2014. 152~p.
+ISBN 9789898305824.}
+
+\bibitem[Roth 1988]{Alvin.1988}
+\abntrefinfo{Roth}{ROTH}{1988}
+{ROTH, A.~E. \emph{The Shapley value: essays in honor of Lloyd S. Shapley}. New
+  York, USA: Cambridge University Press, 1988.
+ISBN 9780521361774.}
+
+\bibitem[Seife 2012]{Seife.2012}
+\abntrefinfo{Seife}{SEIFE}{2012}
+{SEIFE, C. \emph{Os n\'umeros (n\~ao) mentem: Como a matem\'atica pode ser
+  usada para enganar voc\^e}. [S.l.]: Zahar, 2012.
+ISBN 9788537808719.}
+
+\bibitem[Serrano 2013]{Serrano.2013}
+\abntrefinfo{Serrano}{SERRANO}{2013}
+{SERRANO, R. Lloyd shapley's matching and game theory.
+\emph{The Scandinavian Journal of Economics}, Wiley Online Library, v.~115,
+  n.~3, p. 599--618, 2013.}
+
+\bibitem[Shapley 1952]{Shapley.1952}
+\abntrefinfo{Shapley}{SHAPLEY}{1952}
+{SHAPLEY, L.~S. \emph{A value for n-person games}.
+Santa Monica, California, USA, 1952. Dispon{\'\i}vel em:
+  \url{http://www.dtic.mil/cgi-bin/GetTRDoc?AD=AD0604084}.}
+
+\bibitem[Shen 2002]{Shen.2002}
+\abntrefinfo{Shen}{SHEN}{2002}
+{SHEN, W. Distributed manufacturing scheduling using intelligent agents.
+\emph{IEEE Intelligent Systems}, v.~17, n.~1, p. 88--94, 01 2002.
+ISSN 1541-1672.}
+
+\bibitem[Silver 2012]{Nate.2012}
+\abntrefinfo{Silver}{SILVER}{2012}
+{SILVER, N. \emph{O sinal e o ru\'{\i}do}. Rio de Janeiro, Brasil:
+  Intr\'{\i}nseca, 2012.
+ISBN 978-85-8057-353-4.}
+
+\bibitem[Simatupang e Sridharan 2002]{Simatupang.2002}
+\abntrefinfo{Simatupang e Sridharan}{SIMATUPANG; SRIDHARAN}{2002}
+{SIMATUPANG, T.~M.; SRIDHARAN, R. The collaborative supply chain.
+\emph{The International Journal of Logistics Management}, Emerald, v.~13, n.~1,
+  p. 15--30, 01 2002.
+ISSN 0957-4093.}
+
+\bibitem[Smith 1999]{Smith.1999}
+\abntrefinfo{Smith}{SMITH}{1999}
+{SMITH, A. \emph{Teoria dos sentimentos morais}: ensaio para uma an\'alise dos
+  princ\'{\i}pios pelos quais os homens naturalmente julgam a conduta e o
+  car\'ater, primeiro de seus pr\'oximos, depois de si mesmos, acrescida de uma
+  disserta\c{c}\~ao sobre a origem das l\'{\i}nguas. [S.l.]: Martins Fontes,
+  1999.
+ISBN 9788533611047.}
+
+\bibitem[Smith 1982]{Smith.1982}
+\abntrefinfo{Smith}{SMITH}{1982}
+{SMITH, J. \emph{Evolution and the Theory of Games}. [S.l.]: Cambridge
+  University Press, 1982.
+ISBN 9780521288842.}
+
+\bibitem[Tversky 1972]{Tversky.1972}
+\abntrefinfo{Tversky}{TVERSKY}{1972}
+{TVERSKY, A. Choice by elimination.
+\emph{Journal of Mathematical Psychology}, Elsevier Science, v.~9, 1972.}
+
+\bibitem[Wang 2007]{Wang.2007}
+\abntrefinfo{Wang}{WANG}{2007}
+{WANG, Y. Combining data mining and game theory in manufacturing strategy
+  analysis.
+\emph{Journal of Intelligent Manufacturing}, Springer US, v.~18, 08 2007.}
+
+\bibitem[Wickham 2009]{Wickham.2009}
+\abntrefinfo{Wickham}{WICKHAM}{2009}
+{WICKHAM, H. \emph{ggplot2: Elegant Graphics for Data Analysis}.
+  Springer-Verlag New York, 2009.
+ISBN 978-0-387-98140-6. Dispon{\'\i}vel em:
+  \url{http://had.co.nz/ggplot2/book}.}
+
+\bibitem[Wickham 2015]{Wickham.2015}
+\abntrefinfo{Wickham}{WICKHAM}{2015}
+{WICKHAM, H. \emph{scales: Scale Functions for Visualization}.
+[S.l.], 2015. R package version 0.3.0. Dispon{\'\i}vel em:
+  \url{https://CRAN.R-project.org/package=scales}.}
+
+\bibitem[Young 1994]{Young.1994}
+\abntrefinfo{Young}{YOUNG}{1994}
+{YOUNG, H.~P. Cost allocation.
+In:  \underline{\ \ \ \ \ \ \ \ }. \emph{Handbook of Game Theory with Economic
+  Applications}. Amsterdam, Holanda: Elsevier North Holland, 1994. v.~2, cap.
+  Equitable core solutions.
+ISBN 9780444894274.}
+
+\bibitem[Zhuang e Ma 2016]{Zhuang.2016}
+\abntrefinfo{Zhuang e Ma}{ZHUANG; MA}{2016}
+{ZHUANG, Y. feng; MA, L. li. Research on profit allocation of campus express
+  alliance based on the improved shapley value method.
+In:  \underline{\ \ \ \ \ \ \ \ }. \emph{Proceedings of the 22nd International
+  Conference on Industrial Engineering and Engineering Management 2015}. Paris,
+  France: Atlantis Press, 2016.  (Core Theory and Applications of Industrial
+  Engineering, v.~1), p. 715--722.
+ISBN 978-94-6239-180-2.
+Dispon{\'\i}vel em:
+  \url{http://link.springer.com/chapter/10.2991/978-94-6239-180-2\_68}.}
+
+\end{thebibliography}
